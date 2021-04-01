@@ -38,9 +38,7 @@ rpi.digitalWrite(55, rpi.LOW)
 
 for i in range(10000):
         rpi.digitalWrite(54, rpi.HIGH)
-        sleep(0.0001)
         rpi.digitalWrite(54, rpi.LOW)
-        sleep(0.0001)
     print("P2")
 
 
