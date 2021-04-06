@@ -42,7 +42,7 @@ rpi.digitalWrite(pinEnableX, rpi.LOW)
 rpi.digitalWrite(pinDirX, rpi.LOW)
 
 
-for i in range(10000):
+for i in range(1000):
         rpi.digitalWrite(pinStepX, rpi.HIGH)
         rpi.digitalWrite(pinStepX, rpi.LOW)
 print("P2")
