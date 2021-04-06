@@ -19,7 +19,7 @@ rpi=ArduinoApi(connection=connection)
 rpi = ArduinoApi()
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
-rpi.pinMode(38, rpi.OUTPUT)
+rpi.pinMode(pinEnableX, rpi.OUTPUT)
 rpi.pinMode(pinMinX, rpi.INPUT)
 rpi.pinMode(pinMaxX, rpi.INPUT)
 
