@@ -3,40 +3,35 @@
 # Recule chariot X 5mm sens -
 #
 # Cablage PIN Arduino
-# 54 = pinStep 
-# 55 = pinDir
-# 38 = pinEnable
-#
-from nanpy import from (ArduinoApi, SerialManager)
-from time import *
-i=0
+pinStepX = 54
+pinDirX = 55
+pinEnableX = 38
 
-try:
-    connection = SerialManager()
-    rpi=ArduinoApi(connection=connection)
-except:
-    print("Connexion impossible a l'arduino")
+from nanpy import (ArduinoApi, SerialManager)
+from time import sleep
+
+connection = SerialManager(device='/dev/ttyACM0')
+rpi=ArduinoApi(connection=connection)
 
 #Fin initialisation
 
 #Déclaration des entrées / sorties
-rpi.pinMode(54, rpi.OUTPUT)
-rpi.pinMode(55, rpi.OUTPUT)
-rpi.pinMode(38, rpi.OUTPUT)
+rpi.pinMode(pinStepX, rpi.OUTPUT)
+rpi.pinMode(pinDirX, rpi.OUTPUT)
+rpi.pinMode(pinEnableX, rpi.OUTPUT)
 
 #Désactivation du frein
-rpi.digitalWrite(38, rpi.LOW)
+rpi.digitalWrite(pinEnableX, rpi.LOW)
 
 #Choix de la direction => Sens Négatif
-rpi.digitalWrite(55, rpi.HIGH)
+rpi.digitalWrite(pinDirX, rpi.HIGH)
 
 #Recule de 5mm sur X+ <=> 1 tour de MotX <=> 200 pas pour le moteur
 
 for i in range(200):
-        rpi.digitalWrite(54, rpi.HIGH)
-        rpi.digitalWrite(54, rpi.LOW)
-    print("Fin des 200 pas => Recule de 5mm")
-
+    rpi.digitalWrite(pinStepX, rpi.HIGH)
+    rpi.digitalWrite(pinStepX, rpi.LOW)
+    
 
 except:
     print("fin")
