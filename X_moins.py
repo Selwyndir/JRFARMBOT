@@ -7,7 +7,7 @@
 # 55 = pinDir
 # 38 = pinEnable
 #
-from nanpy import ArduinoApi
+from nanpy import from (ArduinoApi, SerialManager)
 from time import *
 i=0
 
