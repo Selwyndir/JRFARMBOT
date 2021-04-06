@@ -1,46 +1,51 @@
-#P1.py
-# 2 = pinMax / 3 = pinMin
-# 54 = pinStep 
-# 55 = pinDir
-# 38 = pinEnable
-from nanpy import ArduinoApi
-from time import *
-i=0
+#P3.py
+#Elias
+pinMaxX = 2
+pinMinX = 3
+pinStepX =  54
+pinDirX = 55
+pinEnableX = 38
+i=1
 
-try:
-    connection = SerialManager()
-    rpi=ArduinoApi(connection=connection)
-except:
-    print("Connexion impossible a l'arduino")
+#Import des bibliothèques
+from nanpy import (ArduinoApi, SerialManager)
+from time import sleep
 
+#Ping l'arduino
+connection = SerialManager(device='/dev/ttyACM0')
+rpi=ArduinoApi(connection=connection)
+
+#Déclaration des pin
 rpi = ArduinoApi()
-rpi.pinMode(54, rpi.OUTPUT)
-rpi.pinMode(55, rpi.OUTPUT)
-rpi.pinMode(38, rpi.OUTPUT)
-rpi.pinMode(3, rpi.INPUT)
-rpi.pinMode(2, rpi.INPUT)
-rpi.digitalWrite(38, rpi.LOW)
-rpi.digitalWrite(55, rpi.HIGH)
+rpi.pinMode(pinStepX, rpi.OUTPUT)
+rpi.pinMode(pinDirX, rpi.OUTPUT)
+rpi.pinMode(pinEnableX, rpi.OUTPUT)
+rpi.pinMode(pinMinX, rpi.INPUT)
+rpi.pinMode(pinMaxX, rpi.INPUT)
 
-pinMin = rpi.digitalRead(3)
-while pinMin != 1:
-    rpi.digitalWrite(54, rpi.HIGH)
+#
+rpi.digitalWrite(pinEnableX, rpi.LOW)
+rpi.digitalWrite(pinDirX, rpi.HIGH)
+
+pinMin = rpi.digitalRead(pinMinX)
+while pinMin != i:
+    rpi.digitalWrite(pinStepX, rpi.HIGH)
     sleep(0.00005)
-    rpi.digitalWrite(54, rpi.LOW)
+    rpi.digitalWrite(pinStepX, rpi.LOW)
     sleep(0.00005)
-    pinMin = rpi.digitalRead(3)
+    pinMin = rpi.digitalRead(pinMinX)
+
 
 
 #Désactivation du frein
-rpi.digitalWrite(38, rpi.LOW)
-rpi.digitalWrite(55, rpi.LOW)
+rpi.digitalWrite(pinEnableX, rpi.LOW)
+rpi.digitalWrite(pinDirX, rpi.LOW)
 
 
 for i in range(18000):
-        rpi.digitalWrite(54, rpi.HIGH)
-        rpi.digitalWrite(54, rpi.LOW)
+        rpi.digitalWrite(pinStepX, rpi.HIGH)
+        rpi.digitalWrite(pinStepX, rpi.LOW)
     print("P3")
-
 
 except:
     print("fin")
