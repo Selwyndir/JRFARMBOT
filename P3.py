@@ -41,7 +41,7 @@ rpi.digitalWrite(pinDirY, rpi.LOW)
 for i in range(?):
         rpi.digitalWrite(pinStepY, rpi.HIGH)
         rpi.digitalWrite(pinStepY, rpi.LOW)
-print("P2")
+print("P3")
 
 except:
     print("fin")
