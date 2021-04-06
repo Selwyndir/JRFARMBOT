@@ -1,10 +1,11 @@
 #P5.py
 #Djallil
-pinMaxX = 2
-pinMinX = 3
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
+pinStepY = 60
+pinDirY = 61
+pinEnableY = 56
 i=0
 
 #Import des bibliothèques
@@ -15,36 +16,31 @@ from time import sleep
 connection = SerialManager(device='/dev/ttyACM0')
 rpi=ArduinoApi(connection=connection)
 
-#Déclaration des pin
+#Déclaration des pin X
 rpi = ArduinoApi()
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
 rpi.pinMode(pinEnableX, rpi.OUTPUT)
-rpi.pinMode(pinMinX, rpi.INPUT)
-rpi.pinMode(pinMaxX, rpi.INPUT)
+#Déclaration des pin Y
+rpi.pinMode(pinStepY, rpi.OUTPUT)
+rpi.pinMode(pinDirY, rpi.OUTPUT)
+rpi.pinMode(pinEnableY, rpi.OUTPUT)
 
-#
-rpi.digitalWrite(pinEnableX, rpi.LOW)
-rpi.digitalWrite(pinDirX, rpi.HIGH)
-
-pinMin = rpi.digitalRead(pinMinX)
-while pinMin != 1:
-    rpi.digitalWrite(pinStepX, rpi.HIGH)
-    sleep(0.00005)
-    rpi.digitalWrite(pinStepX, rpi.LOW)
-    sleep(0.00005)
-    pinMin = rpi.digitalRead(pinMinX)
-
-
-
-#Désactivation du frein
+#Désactivation du frein X
 rpi.digitalWrite(pinEnableX, rpi.LOW)
 rpi.digitalWrite(pinDirX, rpi.LOW)
 
-
-for i in range(34000):
+for i in range(5000):
         rpi.digitalWrite(pinStepX, rpi.HIGH)
         rpi.digitalWrite(pinStepX, rpi.LOW)
+
+#Désactivation du frein Y
+rpi.digitalWrite(pinEnableY, rpi.LOW)
+rpi.digitalWrite(pinDirY, rpi.LOW)
+
+for i in range(?):
+        rpi.digitalWrite(pinStepY, rpi.HIGH)
+        rpi.digitalWrite(pinStepY, rpi.LOW)
 print("P5")
 
 except:
