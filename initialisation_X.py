@@ -1,11 +1,12 @@
 #initialisation_X.py
-# 2 = pinMax / 3 = pinMin
-# 54 = pinStep / 55 = pinDir
-# 38 = pinEnable
-from nanpy import ArduinoApi
+# 2 = pinMaxX
+# 3 = pinMinX
+# 54 = pinStepX
+# 55 = pinDirX
+# 38 = pinEnableX
+from nanpy import (ArduinoApi, SerialManager)
 from time import *
 i=0
-
 try:
     connection = SerialManager()
     rpi=ArduinoApi(connection=connection)
