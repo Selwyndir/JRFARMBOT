@@ -5,7 +5,7 @@ pinMinX = 3
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
-i=1
+i=0
 
 #Import des bibliothèques
 from nanpy import (ArduinoApi, SerialManager)
@@ -28,7 +28,7 @@ rpi.digitalWrite(pinEnableX, rpi.LOW)
 rpi.digitalWrite(pinDirX, rpi.HIGH)
 
 pinMin = rpi.digitalRead(pinMinX)
-while pinMin != i:
+while pinMin != 1:
     rpi.digitalWrite(pinStepX, rpi.HIGH)
     sleep(0.00005)
     rpi.digitalWrite(pinStepX, rpi.LOW)
