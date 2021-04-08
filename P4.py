@@ -39,7 +39,7 @@ for i in range(5000):
 rpi.digitalWrite(pinEnableY, rpi.LOW)
 rpi.digitalWrite(pinDirY, rpi.LOW)
 
-for i in range(?):
+for i in range(250):
         rpi.digitalWrite(pinStepY, rpi.HIGH)
         rpi.digitalWrite(pinStepY, rpi.LOW)
 print("P4")
