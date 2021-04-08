@@ -31,7 +31,7 @@ rpi.pinMode(pinEnableY, rpi.OUTPUT)
 rpi.digitalWrite(pinEnableX, rpi.LOW)
 rpi.digitalWrite(pinDirX, rpi.LOW)
 
-for i in range(5000):
+for i in range(2600):
         rpi.digitalWrite(pinStepX, rpi.HIGH)
         rpi.digitalWrite(pinStepX, rpi.LOW)
 
