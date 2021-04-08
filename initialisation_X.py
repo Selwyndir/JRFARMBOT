@@ -1,5 +1,5 @@
 #initialisation_X.py
-#Sullivan Dahan - - Lefèvre
+#Sullivan Dahan - - Lefevre
 pinMaxX = 2
 pinMinX = 3
 pinStepX =  54
