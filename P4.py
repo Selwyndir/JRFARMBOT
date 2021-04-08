@@ -18,7 +18,6 @@ connection = SerialManager(device='/dev/ttyACM0')
 rpi=ArduinoApi(connection=connection)
 
 #Declaration des pin X
-rpi = ArduinoApi()
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
 rpi.pinMode(pinEnableX, rpi.OUTPUT)
