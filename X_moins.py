@@ -31,7 +31,3 @@ rpi.digitalWrite(pinDirX, rpi.HIGH)
 for i in range(200):
     rpi.digitalWrite(pinStepX, rpi.HIGH)
     rpi.digitalWrite(pinStepX, rpi.LOW)
-    
-
-except:
-    print("fin")
