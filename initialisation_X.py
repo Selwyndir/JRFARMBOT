@@ -7,7 +7,7 @@ pinDirX = 55
 pinEnableX = 38
 i=1
 
-#Import des bibliothèques
+#Import des bibliotheques
 from nanpy import (ArduinoApi, SerialManager)
 from time import sleep
 
@@ -15,7 +15,7 @@ from time import sleep
 connection = SerialManager(device='/dev/ttyACM0')
 rpi=ArduinoApi(connection=connection)
 
-#Déclaration des pin
+#Declaration des pin
 rpi = ArduinoApi()
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
