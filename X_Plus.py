@@ -15,12 +15,12 @@ rpi=ArduinoApi(connection=connection)
 
 #Fin initialisation
 
-#Déclaration des entrées / sorties
+#Declaration des entrees / sorties
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
 rpi.pinMode(pinEnableX, rpi.OUTPUT)
 
-#Désactivation du frein
+#Desactivation du frein
 rpi.digitalWrite(pinEnableX, rpi.LOW)
 
 #Choix de la direction => Sens Positif
@@ -30,4 +30,4 @@ rpi.digitalWrite(pinDirX, rpi.LOW)
 
 for i in range(200):
     rpi.digitalWrite(pinStepX, rpi.LOW)
-    rpi.digitalWrite(pinStepX, rpi.LOW)
+    rpi.digitalWrite(pinStepX, rpi.HIGH)
