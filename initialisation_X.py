@@ -5,7 +5,7 @@ pinMinX = 3
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
-i=1
+i=0
 
 #Import des bibliotheques
 from nanpy import (ArduinoApi, SerialManager)
@@ -16,7 +16,6 @@ connection = SerialManager(device='/dev/ttyACM0')
 rpi=ArduinoApi(connection=connection)
 
 #Declaration des pin
-rpi = ArduinoApi()
 rpi.pinMode(pinStepX, rpi.OUTPUT)
 rpi.pinMode(pinDirX, rpi.OUTPUT)
 rpi.pinMode(pinEnableX, rpi.OUTPUT)
@@ -28,7 +27,7 @@ rpi.digitalWrite(pinEnableX, rpi.LOW)
 rpi.digitalWrite(pinDirX, rpi.HIGH)
 
 pinMin = rpi.digitalRead(pinMinX)
-while pinMin != i:
+while pinMin != 0:
     rpi.digitalWrite(pinStepX, rpi.HIGH)
     sleep(0.00005)
     rpi.digitalWrite(pinStepX, rpi.LOW)
