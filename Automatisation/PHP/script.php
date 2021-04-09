@@ -155,7 +155,7 @@ header('Location: mode_m.html');exit(0); }
  
 //Automatisation
  if(($_POST['executer'] == 'Automatisation'))
- { exec('sudo python3 /var/www/html/python/Automatisation.php'); }
+ { exec('sudo python3 /var/www/html/python/Automatisation.py'); }
 
 header('Location: mode_a.html');
  ?>
