@@ -20,11 +20,9 @@ pinStepZ =  46
 pinDirZ = 48
 pinEnableZ = 62
 i=0
-
 #Import des bibliotheques
 from nanpy import (ArduinoApi, SerialManager)
 from time import sleep
-
 #Ping l'arduino
 connection = SerialManager(device='/dev/ttyACM0')
 rpi=ArduinoApi(connection=connection)
@@ -35,14 +33,12 @@ rpi.pinMode(pinDirX, rpi.OUTPUT)
 rpi.pinMode(pinEnableX, rpi.OUTPUT)
 rpi.pinMode(pinMinX, rpi.INPUT)
 rpi.pinMode(pinMaxX, rpi.INPUT)
-
 #Declaration des pin Y
 rpi.pinMode(pinStepY, rpi.OUTPUT)
 rpi.pinMode(pinDirY, rpi.OUTPUT)
 rpi.pinMode(pinEnableY, rpi.OUTPUT)
 rpi.pinMode(pinMinY, rpi.INPUT)
 rpi.pinMode(pinMaxY, rpi.INPUT)
-
 #Declaration des pin Z
 rpi.pinMode(pinStepZ, rpi.OUTPUT)
 rpi.pinMode(pinDirZ, rpi.OUTPUT)
@@ -68,7 +64,6 @@ while XpinMin != 0:
     rpi.digitalWrite(pinStepX, rpi.LOW)
     sleep(0.00005)
     XpinMin = rpi.digitalRead(pinMinX)
-
 #InitialisationY
 YpinMin = rpi.digitalRead(pinMinY)
 while YpinMin != 0:
@@ -77,7 +72,6 @@ while YpinMin != 0:
     rpi.digitalWrite(pinStepY, rpi.LOW)
     sleep(0.00005)
     YpinMin = rpi.digitalRead(pinMinY)
-
 #InitialisationZ
 ZpinMin = rpi.digitalRead(pinMinZ)
 while ZpinMin != 0:
