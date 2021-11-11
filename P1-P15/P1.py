@@ -1,5 +1,4 @@
 #P1.py
-#Joseph Asselin
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
