@@ -1,5 +1,4 @@
 #InitialisationXYZ.py
-#Sullivan Dahan - - Lefevre
 #Association des Pins à des Variables
 #X
 pinMaxX = 2
