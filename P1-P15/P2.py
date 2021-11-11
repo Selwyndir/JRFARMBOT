@@ -1,5 +1,4 @@
 #P2.py
-#Marwan
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
