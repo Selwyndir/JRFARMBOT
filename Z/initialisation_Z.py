@@ -1,5 +1,4 @@
 #initialisation_Z.py
-#Sullivan Dahan - - Lefevre
 pinMaxZ = 19
 pinMinZ = 18
 pinStepZ =  46
