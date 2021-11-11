@@ -1,5 +1,4 @@
 #X_moins.py
-#Toni De Almeida
 # Recule chariot X 5mm sens -
 #
 # Cablage PIN Arduino
