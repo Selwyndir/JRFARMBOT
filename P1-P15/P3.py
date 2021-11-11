@@ -1,5 +1,4 @@
 #P3.py
-#Elias
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
