@@ -1,5 +1,4 @@
 #Automatisation.py
-#Dahan - - Lefevre Sullivan
 import InitialisationXYZ
 import HumidAuto
 import TPAuto
