@@ -1,5 +1,4 @@
 #P5.py
-#Djallil
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
