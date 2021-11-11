@@ -1,5 +1,4 @@
 #X_plus.py 
-# Younes Dkhira
 # Avance chariot X 5mm sens +
 #
 # Cablage PIN Arduino
