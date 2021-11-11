@@ -1,5 +1,4 @@
 #Y_plus.py 
-# Dahan--Lefevre Sullivan
 pinStepY = 60
 pinDirY = 61
 pinEnableY = 56
