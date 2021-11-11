@@ -1,5 +1,4 @@
 #LumiereAuto.py 
-# Dahan--Lefevre Sullivan
 Lampe = 9
 LUM_PIN = 57
 
