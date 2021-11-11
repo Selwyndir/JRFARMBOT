@@ -1,5 +1,4 @@
 #P4.py
-#Jibril
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
