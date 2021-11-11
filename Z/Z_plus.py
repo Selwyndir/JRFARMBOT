@@ -1,5 +1,4 @@
 #Z_plus.py 
-# Dahan--Lefevre Sullivan
 pinStepZ = 46
 pinDirZ = 48
 pinEnableZ = 62
