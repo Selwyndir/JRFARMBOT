@@ -1,5 +1,4 @@
 #P10.py
-#Sullivan Dahan - - Lefevre
 pinStepX =  54
 pinDirX = 55
 pinEnableX = 38
