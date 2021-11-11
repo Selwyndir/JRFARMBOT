@@ -1,5 +1,4 @@
 #initialisation_Y.py
-#Sullivan Dahan - - Lefevre
 pinMaxY = 15
 pinMinY = 14
 pinStepY =  60
